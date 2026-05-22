@@ -1,4 +1,3 @@
-```markdown
 # Wafer Map Defect Finder
 
 An AI tool built with PyTorch to automatically detect and classify manufacturing flaws on microchip wafer maps. Reengineered from a classic ResNet image recognition model, it processes raw factory data instead of camera photos. It uses smart data tricks to fix heavy class imbalances, hitting a clean **95% accuracy** on unseen test batches.
@@ -19,9 +18,6 @@ The core of this project is a custom-built **ResNet-18** neural network designed
 To bridge this gap, the network was rebuilt from scratch to process raw manufacturing data efficiently without dropping accuracy.
 
 ### Structural Flow Diagram
-
-
-```
 
 [Raw Wafer Data: 1 x 100 x 100]
 │
@@ -46,8 +42,6 @@ To bridge this gap, the network was rebuilt from scratch to process raw manufact
 ▼
 [Linear Output Classifier]   ──► Maps the finalized features to predict 1 of the 9 defect classes.
 
-```
-
 ### Key Network Optimizations
 
 * **Grayscale Input Adaptation:** The initial convolutional layer was re-engineered with `in_channels=1` to native-match the dimensions of your wafer arrays, preventing memory waste.
@@ -63,6 +57,4 @@ The pipeline uses advanced optimization methods designed for high-class imbalanc
 * **Optimizer:** `AdamW` (Weight Decay: `1e-4`, Baseline Learning Rate: `1e-3`)
 * **Learning Rate Scheduler:** `ReduceLROnPlateau` (Dynamic scale factor: `0.5`, patience: `2 epochs` tracking validation loss)
 * **Imbalance Correction:** Handled intense factory distribution skews by injecting customized inverse-frequency cross-entropy loss weight penalties across all 9 target classes.
-
-```
-To read the Jupyter notebook, open the .ipynb file and in the url change the github to "githubtocolab"
+* To read the Jupyter notebook, open the .ipynb file and in the url change the github to "githubtocolab"
