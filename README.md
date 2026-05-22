@@ -57,4 +57,4 @@ The pipeline uses advanced optimization methods designed for high-class imbalanc
 * **Optimizer:** `AdamW` (Weight Decay: `1e-4`, Baseline Learning Rate: `1e-3`)
 * **Learning Rate Scheduler:** `ReduceLROnPlateau` (Dynamic scale factor: `0.5`, patience: `2 epochs` tracking validation loss)
 * **Imbalance Correction:** Handled intense factory distribution skews by injecting customized inverse-frequency cross-entropy loss weight penalties across all 9 target classes.
-* To read the Jupyter notebook, open the .ipynb file and in the url change the github to "githubtocolab"
+## To read the Jupyter notebook, open the .ipynb file and in the url change the github to "githubtocolab"
